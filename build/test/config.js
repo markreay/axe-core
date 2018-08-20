@@ -40,12 +40,8 @@ exports = module.exports = function(grunt, options) {
 				log: true,
 				urls: mapToUrl(
 					[
-						// 'test/integration/full/**/*.html',
-						'!test/integration/full/**/frames/**/*.html',
-						// ignore integration tests on cssom figuring out reason of failure in webdriver
-						'test/integration/full/css-orientation-lock/*.html',
-						'test/integration/full/preload/*.html',
-						'test/integration/full/preload-cssom/*.html'
+						'test/integration/full/**/*.html',
+						'!test/integration/full/**/frames/**/*.html'
 					],
 					'<%= connect.test.options.port %>'
 				),
