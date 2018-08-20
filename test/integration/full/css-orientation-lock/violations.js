@@ -46,7 +46,7 @@ describe('css-orientation-lock violations test', function() {
 		);
 	});
 
-	(shadowSupported ? xit : xit)(
+	(shadowSupported ? it : xit)(
 		'returns VIOLATIONS whilst also accommodating shadowDOM styles',
 		function(done) {
 			var fixture = document.getElementById('shadow-fixture');
