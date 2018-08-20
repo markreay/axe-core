@@ -18,15 +18,15 @@ exports = module.exports = function(grunt, options) {
 				logErrors: true,
 				log: true,
 				urls: [
-					'http://' + host + ':<%= connect.test.options.port %>/test/core/',
-					'http://' + host + ':<%= connect.test.options.port %>/test/checks/',
+					// 'http://' + host + ':<%= connect.test.options.port %>/test/core/',
+					// 'http://' + host + ':<%= connect.test.options.port %>/test/checks/',
 					'http://' +
 						host +
-						':<%= connect.test.options.port %>/test/rule-matches/',
-					'http://' + host + ':<%= connect.test.options.port %>/test/commons/',
-					'http://' +
-						host +
-						':<%= connect.test.options.port %>/test/integration/rules/'
+						':<%= connect.test.options.port %>/test/rule-matches/'
+					// 'http://' + host + ':<%= connect.test.options.port %>/test/commons/',
+					// 'http://' +
+					// 	host +
+					// 	':<%= connect.test.options.port %>/test/integration/rules/'
 				],
 				run: true,
 				growlOnSuccess: false,
@@ -40,12 +40,12 @@ exports = module.exports = function(grunt, options) {
 				log: true,
 				urls: mapToUrl(
 					[
-						'test/integration/full/**/*.html',
+						// 'test/integration/full/**/*.html',
 						'!test/integration/full/**/frames/**/*.html',
 						// ignore integration tests on cssom figuring out reason of failure in webdriver
-						'!test/integration/full/css-orientation-lock/*.html',
-						'!test/integration/full/preload/*.html',
-						'!test/integration/full/preload-cssom/*.html'
+						// '!test/integration/full/css-orientation-lock/*.html',
+						'test/integration/full/preload/*.html'
+						// '!test/integration/full/preload-cssom/*.html'
 					],
 					'<%= connect.test.options.port %>'
 				),
