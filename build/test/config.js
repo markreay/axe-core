@@ -18,15 +18,15 @@ exports = module.exports = function(grunt, options) {
 				logErrors: true,
 				log: true,
 				urls: [
-					// 'http://' + host + ':<%= connect.test.options.port %>/test/core/',
-					// 'http://' + host + ':<%= connect.test.options.port %>/test/checks/',
+					'http://' + host + ':<%= connect.test.options.port %>/test/core/',
+					'http://' + host + ':<%= connect.test.options.port %>/test/checks/',
 					'http://' +
 						host +
-						':<%= connect.test.options.port %>/test/rule-matches/'
-					// 'http://' + host + ':<%= connect.test.options.port %>/test/commons/',
-					// 'http://' +
-					// 	host +
-					// 	':<%= connect.test.options.port %>/test/integration/rules/'
+						':<%= connect.test.options.port %>/test/rule-matches/',
+					'http://' + host + ':<%= connect.test.options.port %>/test/commons/',
+					'http://' +
+						host +
+						':<%= connect.test.options.port %>/test/integration/rules/'
 				],
 				run: true,
 				growlOnSuccess: false,
