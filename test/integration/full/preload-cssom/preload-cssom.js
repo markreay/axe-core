@@ -126,6 +126,12 @@ describe('preload cssom integration test', function() {
 	});
 
 	describe('tests for current top level document', function() {
+		before(function() {
+			if (isPhantom) {
+				this.skip();
+			}
+		});
+
 		it('should return inline stylesheets defined using <style> tag', function(done) {
 			getPreload()
 				.then(function(results) {
@@ -232,7 +238,11 @@ describe('preload cssom integration test', function() {
 		var frame;
 
 		before(function() {
-			frame = document.getElementById('frame1').contentDocument;
+			if (isPhantom) {
+				this.skip();
+			} else {
+				frame = document.getElementById('frame1').contentDocument;
+			}
 		});
 
 		it('should return correct number of stylesheets, ignores disabled', function(done) {
