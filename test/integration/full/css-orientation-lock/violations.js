@@ -10,7 +10,7 @@ describe('css-orientation-lock violations test', function() {
 		}
 	});
 
-	it.skip('returns VIOLATIONS if preload is set to TRUE', function(done) {
+	it('returns VIOLATIONS if preload is set to TRUE', function(done) {
 		// the sheets included in the html, have styles for transform and rotate, hence the violation
 		axe.run(
 			{
