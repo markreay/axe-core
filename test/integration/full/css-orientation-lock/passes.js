@@ -11,14 +11,13 @@ describe('css-orientation-lock passes test', function() {
 	});
 
 	it('returns PASSES when page has STYLE with MEDIA rules (not orientation)', function(done) {
-		// the sheets included in the html, have styles for transform and rotate, hence the violation
 		axe.run(
 			{
 				runOnly: {
 					type: 'rule',
 					values: ['css-orientation-lock']
 				},
-				preload: true // same effect if preload was not defined
+				preload: true
 			},
 			function(err, res) {
 				assert.isNull(err);
